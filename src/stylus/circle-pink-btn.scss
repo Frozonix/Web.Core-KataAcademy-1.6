@@ -1,0 +1,12 @@
+button.circle-pink-btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   background-color: $color-main-pink;
+   border-radius: 50%;
+   border: none;
+   cursor: pointer;
+   user-select: none;
+}

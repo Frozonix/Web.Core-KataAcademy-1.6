@@ -1,0 +1,11 @@
+.modal-feedback {
+   max-width: 440px;
+   .modal-feedback__wrapper {
+      .modal-feedback__form-wrapper {
+         form {
+            display: flex;
+            flex-flow: column nowrap;
+         }
+      }
+   }
+}

@@ -8,8 +8,119 @@
       <title>Name project</title>
    </head>
    <body>
-      <h1>TEST</h1>
+      <nav class="navbar" id="nav">
+         <div class="navbar__wrapper">
+            <div class="navbar__top-block">
+               <div class="navbar__header">
+                  <button class="navbar__cross-btn circle-pink-btn" id="navClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
+                  <img class="navbar__site-logo" src="./img/logo/site-logo.svg" alt="" />
+                  <button class="navbar__search-btn circle-pink-btn"><img src="./img/icons/ic-search.svg" alt="" /></button>
+               </div>
+               <div class="navbar__menu">
+                  <ul>
+                     <li>
+                        <div class="navbar__link--non-active"></div>
+                        <a href="#">Ремонт техники</a>
+                     </li>
+                     <li>
+                        <div class="navbar__link--active"></div>
+                        <a class="navbar__item--active" href="#">Услуги и сервисы</a>
+                     </li>
+                     <li>
+                        <div class="navbar__link--non-active"></div>
+                        <a href="#">Корпоративным клиентам</a>
+                     </li>
+                     <li>
+                        <div class="navbar__link--non-active"></div>
+                        <a href="#">Продавцам техники</a>
+                     </li>
+                     <li>
+                        <div class="navbar__link--non-active"></div>
+                        <a href="#">Партнерам</a>
+                     </li>
+                     <li>
+                        <div class="navbar__link--non-active"></div>
+                        <a href="#">Производителям</a>
+                     </li>
+                     <li>
+                        <div class="navbar__link--non-active"></div>
+                        <a href="#">Наши сервисные центры</a>
+                     </li>
+                     <li>
+                        <div class="navbar__link--non-active"></div>
+                        <a href="#">Контакты</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+            <div class="navbar__bottom-block">
+               <div class="navbar-btns">
+                  <button class="navbar-btns__call-btn circle-pink-btn"><img src="./img/icons/ic-phone.svg" alt="" /></button>
+                  <button class="navbar-btns__chat-btn circle-pink-btn"><img src="./img/icons/ic-chat.svg" alt="" /></button>
+                  <button class="navbar-btns__profile-btn circle-pink-btn"><img src="./img/icons/ic-profile.svg" alt="" /></button>
+               </div>
+               <div class="navbar__contacts-and-language">
+                  <div class="navbar__email-phone-wrapper">
+                     <p>mail@cps.com</p>
+                     <h2>8 800 890 8900</h2>
+                  </div>
+                  <div class="navbar__language-wrapper">
+                     <button class="navbar__item--active">RU</button>
+                     <button>EN</button>
+                     <button>CH</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </nav>
+      <aside class="modal-feedback">
+         <div class="modal-feedback__wrapper">
+            <div class="modal-feedback__header">
+               <button class="modal-feedback__cross-btn circle-pink-btn" id="modal-feedbackClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
+            </div>
+            <div class="modal-feedback__title-wrapper">
+               <div class="modal-feedback__block--active"></div>
+               <h2>Обратная связь</h2>
+            </div>
+            <div class="modal-feedback__form-wrapper">
+               <form action="POST">
+                  <input type="text" placeholder="Имя" />
+                  <input type="tel" placeholder="Телефон" />
+                  <input type="email" placeholder="Электронная почта" />
+                  <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                  <div class="modal-feedback__agree">
+                     <p>
+                        Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+                        <a href="#">политикой конфиденциальности</a>
+                     </p>
+                  </div>
+                  <input type="submit" />
+               </form>
+            </div>
+         </div>
+      </aside>
+      <header class="header">
+         <div class="header__wrapper">
+            <div class="header__logo-and-burgerBtn-wrapper">
+               <button class="header__burger-btn circle-pink-btn" id="navOpen"><img src="./img/icons/ic-burger.svg" alt="" /></button>
+               <img class="header__site-logo" src="./img/logo/site-logo.svg" alt="" />
+            </div>
+            <div class="header__wrapper-btns-block">
+               <div class="navbar-btns">
+                  <button class="navbar-btns__btn--show-md circle-pink-btn"><img src="./img/icons/ic-phone.svg" alt="" /></button>
+                  <button class="navbar-btns__btn--show-md circle-pink-btn"><img src="./img/icons/ic-chat.svg" alt="" /></button>
+                  <button class="navbar-btns__btn--show-md circle-pink-btn"><img src="./img/icons/ic-profile.svg" alt="" /></button>
+               </div>
+               <div class="header__wrapper-right-btns">
+                  <button class="header__repair-btn circle-pink-btn"><img src="./img/icons/ic-repair.svg" alt="" /></button>
+                  <button class="header__checkstatus-btn circle-pink-btn"><img src="./img/icons/ic-checkstatus.svg" alt="" /></button>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- <h1>TEST</h1>
       <img src="./img/webpack-logo.png" alt="" style="width: 50px; height: 50px" />
-      <div class="example"><p>hello!</p></div>
+      <img src="./img/logo/site-logo.svg" alt="" style="width: 50px; height: 50px" />
+      <div class="example"><p>hello!</p></div> -->
    </body>
 </html>

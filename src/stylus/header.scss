@@ -1,0 +1,40 @@
+.header {
+   height: 88px;
+   background-color: white;
+   display: flex;
+   align-items: center;
+   padding: 0 24px;
+   .header__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .header__logo-and-burgerBtn-wrapper {
+         display: flex;
+         flex-flow: row nowrap;
+         align-items: center;
+         justify-content: space-between;
+         gap: 24px;
+         .header__site-logo {
+            width: 97px;
+            height: 51px;
+         }
+      }
+      .header__wrapper-btns-block {
+         display: flex;
+         flex-flow: row nowrap;
+         justify-self: right;
+         .header__wrapper-right-btns {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 16px;
+            margin-left: 20px;
+         }
+         @media (max-width: $width-sm) {
+            .header__wrapper-right-btns {
+               margin-left: 0;
+            }
+         }
+      }
+   }
+}

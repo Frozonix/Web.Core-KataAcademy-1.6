@@ -1,15 +1,16 @@
 @import '~normalize.css';
 @import 'fonts.scss';
 
+@import 'variables.scss';
+
 body {
-   font-family: 'TTLakes-B';
+   box-sizing: border-box;
+   background-color: $color-main-grey;
+   font-family: 'TTLakes-R';
 }
 
-.example {
-   display: grid;
-   transition: all 0.5s;
-   user-select: none;
-   background: url('../assets/img/webpack-logo.png');
-   background-size: 7%;
-   height: 100px;
-}
+@import 'circle-pink-btn.scss';
+@import 'navbar-btns.scss';
+@import 'navbar.scss';
+@import 'header.scss';
+@import 'modal-feedback.scss';
