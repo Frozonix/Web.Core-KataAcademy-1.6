@@ -38,3 +38,8 @@
       }
    }
 }
+@media (min-width: $width-xl) {
+   .header {
+      display: none;
+   }
+}

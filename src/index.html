@@ -8,75 +8,10 @@
       <title>Name project</title>
    </head>
    <body>
-      <nav class="navbar" id="nav">
-         <div class="navbar__wrapper">
-            <div class="navbar__top-block">
-               <div class="navbar__header">
-                  <button class="navbar__cross-btn circle-pink-btn" id="navClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
-                  <img class="navbar__site-logo" src="./img/logo/site-logo.svg" alt="" />
-                  <button class="navbar__search-btn circle-pink-btn"><img src="./img/icons/ic-search.svg" alt="" /></button>
-               </div>
-               <div class="navbar__menu">
-                  <ul>
-                     <li>
-                        <div class="navbar__link--non-active"></div>
-                        <a href="#">Ремонт техники</a>
-                     </li>
-                     <li>
-                        <div class="navbar__link--active"></div>
-                        <a class="navbar__item--active" href="#">Услуги и сервисы</a>
-                     </li>
-                     <li>
-                        <div class="navbar__link--non-active"></div>
-                        <a href="#">Корпоративным клиентам</a>
-                     </li>
-                     <li>
-                        <div class="navbar__link--non-active"></div>
-                        <a href="#">Продавцам техники</a>
-                     </li>
-                     <li>
-                        <div class="navbar__link--non-active"></div>
-                        <a href="#">Партнерам</a>
-                     </li>
-                     <li>
-                        <div class="navbar__link--non-active"></div>
-                        <a href="#">Производителям</a>
-                     </li>
-                     <li>
-                        <div class="navbar__link--non-active"></div>
-                        <a href="#">Наши сервисные центры</a>
-                     </li>
-                     <li>
-                        <div class="navbar__link--non-active"></div>
-                        <a href="#">Контакты</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="navbar__bottom-block">
-               <div class="navbar-btns">
-                  <button class="navbar-btns__call-btn circle-pink-btn"><img src="./img/icons/ic-phone.svg" alt="" /></button>
-                  <button class="navbar-btns__chat-btn circle-pink-btn"><img src="./img/icons/ic-chat.svg" alt="" /></button>
-                  <button class="navbar-btns__profile-btn circle-pink-btn"><img src="./img/icons/ic-profile.svg" alt="" /></button>
-               </div>
-               <div class="navbar__contacts-and-language">
-                  <div class="navbar__email-phone-wrapper">
-                     <p>mail@cps.com</p>
-                     <h2>8 800 890 8900</h2>
-                  </div>
-                  <div class="navbar__language-wrapper">
-                     <button class="navbar__item--active">RU</button>
-                     <button>EN</button>
-                     <button>CH</button>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </nav>
-      <aside class="modal-feedback">
+      <aside class="modal-feedback" id="modalFeedback">
          <div class="modal-feedback__wrapper">
             <div class="modal-feedback__header">
-               <button class="modal-feedback__cross-btn circle-pink-btn" id="modal-feedbackClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
+               <button class="modal-feedback__cross-btn circle-pink-btn" id="feedbackClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
             </div>
             <div class="modal-feedback__title-wrapper">
                <div class="modal-feedback__block--active"></div>
@@ -87,14 +22,37 @@
                   <input type="text" placeholder="Имя" />
                   <input type="tel" placeholder="Телефон" />
                   <input type="email" placeholder="Электронная почта" />
-                  <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                  <textarea name="" id="" placeholder="Сообщение"></textarea>
                   <div class="modal-feedback__agree">
                      <p>
                         Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
                         <a href="#">политикой конфиденциальности</a>
                      </p>
                   </div>
-                  <input type="submit" />
+                  <input type="submit" class="modal-feedback__submit-btn" />
+               </form>
+            </div>
+         </div>
+      </aside>
+      <aside class="modal-call" id="modalCall">
+         <div class="modal-call__wrapper">
+            <div class="modal-call__header">
+               <button class="modal-call__cross-btn circle-pink-btn" id="callClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
+            </div>
+            <div class="modal-call__title-wrapper">
+               <div class="modal-call__block--active"></div>
+               <h2>Заказать звонок</h2>
+            </div>
+            <div class="modal-call__form-wrapper">
+               <form action="POST">
+                  <input type="tel" placeholder="Телефон" />
+                  <div class="modal-call__agree">
+                     <p>
+                        Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
+                        <a href="#">политикой конфиденциальности</a>
+                     </p>
+                  </div>
+                  <input type="submit" class="modal-call__submit-btn" />
                </form>
             </div>
          </div>
@@ -108,7 +66,7 @@
             <div class="header__wrapper-btns-block">
                <div class="navbar-btns">
                   <button class="navbar-btns__btn--show-md circle-pink-btn"><img src="./img/icons/ic-phone.svg" alt="" /></button>
-                  <button class="navbar-btns__btn--show-md circle-pink-btn"><img src="./img/icons/ic-chat.svg" alt="" /></button>
+                  <button class="navbar-btns__btn--show-md circle-pink-btn" id="feedbackOpen-header"><img src="./img/icons/ic-chat.svg" alt="" /></button>
                   <button class="navbar-btns__btn--show-md circle-pink-btn"><img src="./img/icons/ic-profile.svg" alt="" /></button>
                </div>
                <div class="header__wrapper-right-btns">
@@ -118,6 +76,144 @@
             </div>
          </div>
       </header>
+      <main>
+         <nav class="navbar" id="nav">
+            <div class="navbar__wrapper">
+               <div class="navbar__top-block">
+                  <div class="navbar__header">
+                     <button class="navbar__cross-btn circle-pink-btn" id="navClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
+                     <img class="navbar__site-logo" src="./img/logo/site-logo.svg" alt="" />
+                     <button class="navbar__search-btn circle-pink-btn"><img src="./img/icons/ic-search.svg" alt="" /></button>
+                  </div>
+                  <div class="navbar__menu">
+                     <ul>
+                        <li>
+                           <div class="navbar__link--non-active"></div>
+                           <a href="#">Ремонт техники</a>
+                        </li>
+                        <li>
+                           <div class="navbar__link--active"></div>
+                           <a class="navbar__item--active" href="#">Услуги и сервисы</a>
+                        </li>
+                        <li>
+                           <div class="navbar__link--non-active"></div>
+                           <a href="#">Корпоративным клиентам</a>
+                        </li>
+                        <li>
+                           <div class="navbar__link--non-active"></div>
+                           <a href="#">Продавцам техники</a>
+                        </li>
+                        <li>
+                           <div class="navbar__link--non-active"></div>
+                           <a href="#">Партнерам</a>
+                        </li>
+                        <li>
+                           <div class="navbar__link--non-active"></div>
+                           <a href="#">Производителям</a>
+                        </li>
+                        <li>
+                           <div class="navbar__link--non-active"></div>
+                           <a href="#">Наши сервисные центры</a>
+                        </li>
+                        <li>
+                           <div class="navbar__link--non-active"></div>
+                           <a href="#">Контакты</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="navbar__bottom-block">
+                  <div class="navbar-btns">
+                     <button class="navbar-btns__call-btn circle-pink-btn"><img src="./img/icons/ic-phone.svg" alt="" /></button>
+                     <button class="navbar-btns__chat-btn circle-pink-btn" id="feedbackOpen"><img src="./img/icons/ic-chat.svg" alt="" /></button>
+                     <button class="navbar-btns__profile-btn circle-pink-btn"><img src="./img/icons/ic-profile.svg" alt="" /></button>
+                  </div>
+                  <div class="navbar__contacts-and-language">
+                     <div class="navbar__email-phone-wrapper">
+                        <p>mail@cps.com</p>
+                        <h2>8 800 890 8900</h2>
+                     </div>
+                     <div class="navbar__language-wrapper">
+                        <button class="navbar__item--active">RU</button>
+                        <button>EN</button>
+                        <button>CH</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </nav>
+         <div>
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias ex excepturi asperiores ut culpa harum animi, suscipit architecto maxime natus
+               assumenda optio praesentium quia, saepe commodi dolorum ipsum blanditiis minus. Odit dignissimos vero est eius consequatur deleniti, aspernatur
+               libero, asperiores magni quam ipsam autem necessitatibus. Repellendus ab obcaecati similique eius praesentium vel, in tempora accusamus ex
+               eveniet vitae dolorem adipisci, voluptas, iusto excepturi sapiente amet? Dicta praesentium nesciunt, iure possimus iste cumque cupiditate vel
+               perspiciatis beatae sint repellendus est perferendis tenetur incidunt. Suscipit, ipsa maiores quam, in quo quaerat delectus necessitatibus,
+               dolorum ab nobis nulla velit ipsum? Labore odio debitis id dignissimos veniam, quis officiis culpa voluptas autem obcaecati, beatae ea, ad
+               aspernatur eius? Dolorum rerum, debitis quas beatae ducimus voluptates, vel, laudantium aut reiciendis earum eum rem? At praesentium ipsam
+               minima. Doloremque accusantium reprehenderit facilis temporibus quae, quibusdam amet ea, cumque est, ipsum at earum impedit dolores maxime
+               corporis deserunt dignissimos autem! Qui officiis accusamus, architecto totam ut culpa doloribus officia ipsam quibusdam consectetur quasi
+               commodi, vel vitae, voluptatibus nostrum reprehenderit fugit quidem quos veritatis suscipit cupiditate tempora. Libero corporis quae quos.
+               Similique recusandae aspernatur, consequatur aperiam cupiditate accusantium sint dicta illum eos accusamus non officia illo eius soluta autem
+               perferendis? Veritatis aliquid quia voluptatum explicabo, nobis consequuntur fugiat accusantium aspernatur debitis possimus odio minima
+               reiciendis praesentium molestiae magnam, aliquam ipsa voluptatibus dolor! Odio voluptate earum dolor magni veniam error deserunt nulla
+               voluptatem, iusto inventore corporis eveniet debitis molestiae. Eaque, laudantium veritatis! Provident eaque voluptas nam accusamus sed assumenda
+               error impedit blanditiis, aspernatur possimus explicabo porro magnam perspiciatis dolorum. Explicabo amet autem quos facilis in repellendus nam
+               commodi sit ipsa maxime vel recusandae, rem hic, quasi quas voluptates perspiciatis quidem ipsum officiis, harum deserunt! Deserunt autem sint
+               laborum perspiciatis nostrum neque, ratione molestiae ipsum tenetur ad, dignissimos error. Deserunt dolor quibusdam impedit molestiae? Quae sit
+               delectus optio vero, tenetur doloremque, odio alias nobis asperiores sapiente quo, omnis ea. Odit porro, unde cum nisi placeat nulla
+               exercitationem excepturi assumenda vitae perspiciatis quia quod commodi sapiente doloremque molestias, eius iure. Ratione possimus animi tenetur
+               ex dolor, aliquid perspiciatis nostrum illum ut minus. Rerum nemo dicta neque nostrum dolor velit. Laborum, repellat rerum quaerat beatae, in
+               dignissimos, provident accusamus cumque quam repellendus dolore suscipit fugiat? Officia praesentium labore nulla quae quod neque sed ducimus sit
+               debitis voluptas sequi quas, dolor perferendis, deleniti quis nam aliquam, aliquid similique doloremque maiores. Autem nisi alias quae in
+               repudiandae laborum laboriosam quidem consequuntur pariatur, atque quas sapiente. Molestias molestiae ipsum obcaecati harum? Sed dolor,
+               asperiores esse tempora quaerat sapiente accusantium nemo quam vel autem corrupti deleniti quos, iure sit, laborum nisi odit quibusdam architecto
+               ratione commodi laudantium veniam. Molestias rem cupiditate saepe, veritatis sint exercitationem nemo. Assumenda illo excepturi mollitia est,
+               quisquam iste eius ab obcaecati, atque tempore earum dolore. Odit, dignissimos provident! Quisquam explicabo rem minima rerum esse aut nisi
+               deserunt consequatur officia eos sit labore, soluta ipsa tenetur id totam mollitia quaerat eaque omnis laudantium excepturi! Expedita optio
+               repudiandae id cumque illum quaerat aut deserunt, sint tempore eaque mollitia harum ea, iure adipisci nemo illo iusto veniam aliquid! Hic dolorum
+               vero, eos quos eaque soluta sunt aliquam illo ipsum repudiandae molestiae enim laboriosam totam quibusdam in autem ducimus voluptatibus porro
+               officia neque mollitia? Porro, ab, a id quidem est excepturi, at laborum ex accusamus consequatur eligendi veritatis! Tenetur provident non
+               perferendis doloribus nulla nesciunt. Illum expedita facere sed commodi quidem laboriosam sint dolore magnam voluptate sunt, necessitatibus iure
+               dolores labore praesentium corrupti dolor velit temporibus? Architecto odio corrupti voluptates, aperiam eveniet est suscipit unde molestiae,
+               aliquam, officiis id beatae quam. Ullam magnam unde corporis.
+            </p>
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam neque quidem, sit nobis distinctio voluptatibus porro ex earum commodi, adipisci
+               nemo iure eaque eligendi veritatis. Culpa minus ut quod commodi quis nihil aliquam eos explicabo, nesciunt distinctio quo maxime sapiente
+               voluptatibus incidunt doloremque laudantium voluptas, eius tempora? Aut impedit, ipsum nemo nisi non saepe aspernatur doloremque tempora, neque
+               quam sequi qui ducimus sapiente eaque fugiat natus eos magnam, beatae temporibus at dignissimos sint? Repellat vel quibusdam, esse modi, error
+               harum iste deserunt molestiae eos totam a asperiores exercitationem ratione dolorum reprehenderit ipsam et consequatur repellendus aperiam
+               corporis ab magnam earum? A veniam laudantium eveniet aliquid quasi voluptatibus? Non incidunt inventore nihil ab architecto repudiandae dolorem
+               nisi magni sequi ea tempore quis, minus tenetur, quia recusandae cum enim doloremque consequatur nam corrupti voluptatem sed nostrum dolore
+               cumque? Deserunt fugit ullam dignissimos quod, perferendis cupiditate excepturi veniam consectetur, reprehenderit ea aperiam at quasi nam.
+               Voluptas, harum vero aut atque debitis expedita voluptates porro alias. Aspernatur nesciunt molestiae praesentium deserunt sunt, odit quasi
+               libero doloremque voluptas cumque, nam, quas quisquam nulla harum magnam recusandae nihil molestias! Ipsam odio voluptatum officia fuga repellat
+               vel commodi nihil. Dolore delectus minima sed officiis tenetur explicabo quas odit adipisci laboriosam laudantium itaque exercitationem in ullam
+               iusto, nostrum omnis eligendi quos beatae, cupiditate provident nihil corporis magnam? Magnam consequuntur, sed ducimus illum qui soluta repellat
+               aliquam ipsum voluptates, totam, placeat odio cumque quidem dolorem. Sunt non deserunt voluptates doloribus nulla, iure ea at modi libero impedit
+               nam ratione! Et dolor nostrum consequatur magni eum impedit rem perspiciatis, quidem assumenda provident, saepe ea. Nemo explicabo tempora vero
+               amet quibusdam atque. Perspiciatis dolor quae expedita iure debitis, laboriosam nobis qui dolorem? Animi, inventore adipisci eum omnis, dolorem
+               sunt magnam expedita cupiditate aliquid hic nisi quo eius perferendis veritatis perspiciatis! Obcaecati unde dolor distinctio ex, asperiores cum
+               quod, porro laudantium labore ea vel sequi error perferendis magnam beatae tempore placeat! Aliquid natus excepturi expedita pariatur non maiores
+               eos libero, voluptatibus eum error ullam sequi. Voluptatum iure, blanditiis quaerat perspiciatis quo dolorem est soluta voluptatem reprehenderit,
+               assumenda ut minima sint dolor animi quod. Neque possimus natus eaque eveniet alias, non, architecto est eligendi suscipit velit consectetur quo
+               ipsa aliquid cupiditate quas, magnam dolor voluptatibus. Dicta adipisci officiis laboriosam nesciunt nobis veritatis ea ab quia ad odio
+               temporibus soluta, unde possimus? Quidem minima eligendi, recusandae provident quae quo libero dolores aliquam maxime facilis, cupiditate iusto
+               eius praesentium nisi animi dolorum magnam eaque, voluptas perspiciatis sequi. Omnis vitae corrupti rerum laborum illum exercitationem vel
+               cupiditate tenetur qui delectus ex ullam, ducimus quis numquam facilis, mollitia accusamus obcaecati vero rem molestiae, cumque veniam natus
+               possimus. Deserunt alias et animi, delectus debitis enim sequi aperiam laudantium, culpa nam harum quos quam pariatur ab laborum fugit! Nesciunt
+               voluptates quaerat, eligendi ea harum aperiam, quam ipsam, porro voluptatibus similique laborum! Nobis fugiat repellat quidem, rem odio neque
+               laboriosam reprehenderit non numquam impedit! Cumque alias, nisi ducimus deleniti repudiandae animi quae beatae aperiam cum laudantium.
+               Consectetur itaque fuga quidem debitis impedit architecto explicabo accusantium libero earum officiis, perspiciatis delectus ut rem aliquam
+               facilis repellendus reiciendis sapiente blanditiis natus fugiat dolore aut sit mollitia praesentium. Eius sed consequuntur ea vero. Dignissimos
+               beatae odit neque quisquam, assumenda laborum. Aliquam quaerat totam adipisci fugit eligendi praesentium, consequatur quae at ut nisi. Saepe, qui
+               itaque libero officia perspiciatis pariatur ipsam debitis voluptatem ipsa reiciendis, veniam sint fugiat nobis fuga. Fugiat molestias aliquid
+               adipisci, placeat perspiciatis rerum suscipit soluta, excepturi voluptate eligendi numquam praesentium ipsa earum nulla necessitatibus nemo quos
+               ratione inventore maxime, obcaecati deleniti velit veniam! Aliquid numquam eveniet, corrupti blanditiis id dignissimos?
+            </p>
+         </div>
+      </main>
       <!-- <h1>TEST</h1>
       <img src="./img/webpack-logo.png" alt="" style="width: 50px; height: 50px" />
       <img src="./img/logo/site-logo.svg" alt="" style="width: 50px; height: 50px" />
