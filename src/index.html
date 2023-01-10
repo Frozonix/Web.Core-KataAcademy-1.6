@@ -8,51 +8,51 @@
       <title>Name project</title>
    </head>
    <body>
-      <aside class="modal-feedback" id="modalFeedback">
-         <div class="modal-feedback__wrapper">
-            <div class="modal-feedback__header">
-               <button class="modal-feedback__cross-btn circle-pink-btn" id="feedbackClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
+      <aside class="modal" id="modalFeed">
+         <div class="modal__wrapper">
+            <div class="modal__header">
+               <button class="modal__cross-btn circle-pink-btn" id="feedClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
             </div>
-            <div class="modal-feedback__title-wrapper">
-               <div class="modal-feedback__block--active"></div>
+            <div class="modal__title-wrapper">
+               <div class="modal__block--active"></div>
                <h2>Обратная связь</h2>
             </div>
-            <div class="modal-feedback__form-wrapper">
+            <div class="modal__form-wrapper">
                <form action="POST">
                   <input type="text" placeholder="Имя" />
                   <input type="tel" placeholder="Телефон" />
                   <input type="email" placeholder="Электронная почта" />
                   <textarea name="" id="" placeholder="Сообщение"></textarea>
-                  <div class="modal-feedback__agree">
+                  <div class="modal__agree">
                      <p>
                         Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
                         <a href="#">политикой конфиденциальности</a>
                      </p>
                   </div>
-                  <input type="submit" class="modal-feedback__submit-btn" />
+                  <input type="submit" class="modal__submit-btn" />
                </form>
             </div>
          </div>
       </aside>
-      <aside class="modal-call" id="modalCall">
-         <div class="modal-call__wrapper">
-            <div class="modal-call__header">
-               <button class="modal-call__cross-btn circle-pink-btn" id="callClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
+      <aside class="modal" id="modalCall">
+         <div class="modal__wrapper">
+            <div class="modal__header">
+               <button class="modal__cross-btn circle-pink-btn" id="callClose"><img src="./img/icons/ic-burger-cross.svg" alt="" /></button>
             </div>
-            <div class="modal-call__title-wrapper">
-               <div class="modal-call__block--active"></div>
+            <div class="modal__title-wrapper">
+               <div class="modal__block--active"></div>
                <h2>Заказать звонок</h2>
             </div>
-            <div class="modal-call__form-wrapper">
+            <div class="modal__form-wrapper">
                <form action="POST">
                   <input type="tel" placeholder="Телефон" />
-                  <div class="modal-call__agree">
+                  <div class="modal__agree">
                      <p>
                         Нажимая “отправить”, вы даете согласие на <a href="#">обработку персональных данных</a> и соглашаетесь с нашей
                         <a href="#">политикой конфиденциальности</a>
                      </p>
                   </div>
-                  <input type="submit" class="modal-call__submit-btn" />
+                  <input type="submit" class="modal__submit-btn" />
                </form>
             </div>
          </div>
@@ -65,8 +65,8 @@
             </div>
             <div class="header__wrapper-btns-block">
                <div class="navbar-btns">
-                  <button class="navbar-btns__btn--show-md circle-pink-btn"><img src="./img/icons/ic-phone.svg" alt="" /></button>
-                  <button class="navbar-btns__btn--show-md circle-pink-btn" id="feedbackOpen-header"><img src="./img/icons/ic-chat.svg" alt="" /></button>
+                  <button class="navbar-btns__btn--show-md circle-pink-btn" id="callOpen-header"><img src="./img/icons/ic-phone.svg" alt="" /></button>
+                  <button class="navbar-btns__btn--show-md circle-pink-btn" id="feedOpen-header"><img src="./img/icons/ic-chat.svg" alt="" /></button>
                   <button class="navbar-btns__btn--show-md circle-pink-btn"><img src="./img/icons/ic-profile.svg" alt="" /></button>
                </div>
                <div class="header__wrapper-right-btns">
@@ -124,8 +124,8 @@
                </div>
                <div class="navbar__bottom-block">
                   <div class="navbar-btns">
-                     <button class="navbar-btns__call-btn circle-pink-btn"><img src="./img/icons/ic-phone.svg" alt="" /></button>
-                     <button class="navbar-btns__chat-btn circle-pink-btn" id="feedbackOpen"><img src="./img/icons/ic-chat.svg" alt="" /></button>
+                     <button class="navbar-btns__call-btn circle-pink-btn" id="callOpen"><img src="./img/icons/ic-phone.svg" alt="" /></button>
+                     <button class="navbar-btns__chat-btn circle-pink-btn" id="feedOpen"><img src="./img/icons/ic-chat.svg" alt="" /></button>
                      <button class="navbar-btns__profile-btn circle-pink-btn"><img src="./img/icons/ic-profile.svg" alt="" /></button>
                   </div>
                   <div class="navbar__contacts-and-language">
