@@ -1,0 +1,107 @@
+.title-content {
+   margin-bottom: 32px;
+   .title-content__title-wrapper {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      height: 100%;
+      .title-content__block--active {
+         width: 4px;
+         height: 40px;
+         background-color: $color-ui-blue;
+         display: inline-block;
+         position: relative;
+         left: -32px;
+      }
+      h1 {
+         font-family: 'TTLakes-B';
+         font-size: 28px;
+         line-height: 40px;
+         margin: 0;
+         /* identical to box height, or 143% */
+
+         letter-spacing: -0.6px;
+      }
+      .title-content__right-btns-wrapper {
+         display: flex;
+         flex-flow: row nowrap;
+         margin-left: auto;
+         label {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+
+            font-family: 'TTLakes-M';
+            font-size: 16px;
+            line-height: 24px;
+            /* identical to box height, or 150% */
+
+            text-align: right;
+            letter-spacing: -0.2px;
+            button {
+               margin-left: 8px;
+            }
+            .title-content__repair-btn {
+               margin-right: 32px;
+            }
+         }
+      }
+      @media (max-width: $width-md) {
+         .title-content__block--active {
+            left: -24px;
+         }
+      }
+      @media (max-width: $width-xl) {
+         .title-content__right-btns-wrapper {
+            display: none;
+         }
+      }
+   }
+   .title-content__slider-menu {
+      .title-content__slider-menu-wrapper {
+         margin: 32px 0;
+         ul {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 20px;
+            justify-content: space-between;
+            padding: 0;
+            overflow: hidden;
+            li {
+               list-style: none;
+               white-space: nowrap;
+               color: $color-text-2;
+               position: relative;
+               cursor: pointer;
+            }
+            .title-content__item-menu--active {
+               padding: 8px 20px;
+               background-color: white;
+               border-radius: 6px;
+               border: 2px solid $color-ui-light-blue;
+            }
+            .title-content__item-menu--no-active {
+               padding: 8px 20px;
+            }
+            .title-content__item-menu--no-active:hover {
+               li {
+                  color: $color-text-1;
+                  transition: 0.1s ease;
+               }
+            }
+            // li:nth-child(1) {
+            //    margin-right: 48px;
+            // }
+            // li:nth-child(2) {
+            //    margin-right: 42px;
+            // }
+            // li:nth-child(3) {
+            //    margin-right: 47px;
+            // }
+            // li:nth-child(4) {
+            //    margin-right: 21px;
+            // }
+         }
+      }
+   }
+}

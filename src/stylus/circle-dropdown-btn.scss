@@ -1,0 +1,23 @@
+.circle-dropdown-btn {
+   background-color: transparent;
+   border: 2px solid $color-main-pink;
+   border-radius: 50%;
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+
+   img {
+      margin-left: 1px;
+      transition: 0.3s ease;
+   }
+}
+
+.content__circle-dropdown--rotate:hover {
+   cursor: pointer;
+   .circle-dropdown-btn {
+      img {
+         margin: 6px 0 0 0;
+         transform: rotate(90deg);
+      }
+   }
+}

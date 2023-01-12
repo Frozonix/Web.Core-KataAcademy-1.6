@@ -1,0 +1,24 @@
+.content-block-title {
+   margin: 0 -32px 24px -32px;
+   .content-block-title__title-wrapper {
+      background: linear-gradient(90deg, #f8f8f8 0%, #ffffff 98.61%);
+      p {
+         padding: 16px 0 16px 32px;
+
+         font-family: 'TTLakes-R';
+         font-size: 16px;
+         line-height: 24px;
+         /* identical to box height, or 150% */
+
+         letter-spacing: -0.2px;
+         text-transform: uppercase;
+
+         color: $color-text-2;
+      }
+   }
+}
+@media (max-width: $width-md) {
+   .content-block-title {
+      margin: 0 -24px 24px -24px;
+   }
+}

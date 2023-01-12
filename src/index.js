@@ -14,6 +14,7 @@ document.getElementById('navClose').addEventListener('click', function () {
 });
 //==================================================================
 //Вспомогательные функции для модальных окон
+// let modalIsOpen = false;
 function setModalId(target) {
    let id = target.substr(0, 4);
    let result = 'modal' + id.charAt(0).toUpperCase() + id.slice(1);
@@ -62,4 +63,9 @@ document.getElementById('feedClose').addEventListener('click', function (e) {
 document.getElementById('callClose').addEventListener('click', function (e) {
    console.log(e.target.id);
    modalClose(e.target.id);
+});
+document.getElementById('mainContent').addEventListener('click', function () {
+   if (window.innerWidth >= 576 && window.innerWidth <= 768) {
+      removeModals();
+   }
 });
