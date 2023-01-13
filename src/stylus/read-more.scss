@@ -1,0 +1,21 @@
+.read-more {
+   button {
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      gap: 16px;
+
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      margin-top: 24px;
+      margin-bottom: 56px;
+      p {
+         margin: 0;
+         font-family: 'TTLakes-M';
+         font-size: 16px;
+         line-height: 24px;
+         letter-spacing: -0.2px;
+      }
+   }
+}

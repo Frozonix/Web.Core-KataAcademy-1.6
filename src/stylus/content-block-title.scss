@@ -22,3 +22,8 @@
       margin: 0 -24px 24px -24px;
    }
 }
+@media (max-width: $width-sm) {
+   .content-block-title {
+      margin: 0 -16px 24px -16px;
+   }
+}
