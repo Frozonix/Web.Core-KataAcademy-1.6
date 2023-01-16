@@ -6,6 +6,39 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="favicon.ico" type="image/icon" />
       <title>Name project</title>
+      <style>
+         .swiper {
+            width: 100%;
+            height: 100%;
+         }
+
+         .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+         }
+
+         .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      </style>
    </head>
    <body>
       <aside class="modal" id="modalFeed">
@@ -171,10 +204,6 @@
                            <div class="title-content__item-menu--no-active"><li>Цены на услуги</li></div>
                            <div class="title-content__item-menu--no-active"><li>Адреса сервисных центров</li></div>
                            <div class="title-content__item-menu--no-active"><li>Специальные цены</li></div>
-
-                           <!-- <li>Цены на услуги</li>
-                           <li></li>
-                           <li>Специальные цены</li> -->
                         </ul>
                      </div>
                   </div>
@@ -190,8 +219,15 @@
                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы
                            гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
                         </p>
+                        <p>
+                           <span id="more-1">
+                              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et voluptates laboriosam, aliquam aliquid quae harum nam ab deserunt,
+                              eum saepe ipsa doloremque, a reprehenderit minima! Doloremque fugit unde nam veniam quibusdam quaerat, cupiditate sunt harum, quo
+                              aperiam suscipit illum iusto!
+                           </span>
+                        </p>
                         <div class="read-more">
-                           <button>
+                           <button id="readMore-1">
                               <img src="./img/icons/ic-expand.svg" alt="" />
                               <p>Читать далее</p>
                            </button>
@@ -208,74 +244,92 @@
                         <p>Ремонт техники различных брендов</p>
                      </div>
                   </div>
-                  <div class="content__brands-wrapper">
-                     <div class="content__brand-item content__circle-dropdown--rotate">
-                        <div class="content__brand-item-wrapper">
-                           <img src="./img/logo/lenovo.png" alt="" class="brand-logo" />
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
+                  <div class="content__brand-hide-wrapper">
+                     <div class="content__brands-wrapper">
+                        <div class="content__brand-item content__circle-dropdown--rotate">
+                           <div class="content__brand-item-wrapper">
+                              <img src="./img/logo/lenovo.png" alt="" class="brand-logo" />
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
                         </div>
-                     </div>
-                     <div class="content__brand-item content__circle-dropdown--rotate">
-                        <div class="content__brand-item-wrapper">
-                           <img src="./img/logo/samsung.png" alt="" class="brand-logo" />
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
+                        <div class="content__brand-item content__circle-dropdown--rotate">
+                           <div class="content__brand-item-wrapper">
+                              <img src="./img/logo/samsung.png" alt="" class="brand-logo" />
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
                         </div>
-                     </div>
-                     <div class="content__brand-item content__circle-dropdown--rotate">
-                        <div class="content__brand-item-wrapper">
-                           <img src="./img/logo/apple.png" alt="" class="brand-logo" />
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
+                        <div class="content__brand-item content__circle-dropdown--rotate">
+                           <div class="content__brand-item-wrapper">
+                              <img src="./img/logo/apple.png" alt="" class="brand-logo" />
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
                         </div>
-                     </div>
-                     <div class="content__brand-item content__circle-dropdown--rotate">
-                        <div class="content__brand-item-wrapper">
-                           <img src="./img/logo/viewsonic.png" alt="" class="brand-logo" />
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
+                        <div class="content__brand-item content__circle-dropdown--rotate">
+                           <div class="content__brand-item-wrapper">
+                              <img src="./img/logo/viewsonic.png" alt="" class="brand-logo" />
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
                         </div>
-                     </div>
-                     <div class="content__brand-item content__circle-dropdown--rotate">
-                        <div class="content__brand-item-wrapper">
-                           <img src="./img/logo/bosch.png" alt="" class="brand-logo" />
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
+                        <div class="content__brand-item content__circle-dropdown--rotate">
+                           <div class="content__brand-item-wrapper">
+                              <img src="./img/logo/bosch.png" alt="" class="brand-logo" />
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
                         </div>
-                     </div>
-                     <div class="content__brand-item content__circle-dropdown--rotate">
-                        <div class="content__brand-item-wrapper">
-                           <img src="./img/logo/hp.png" alt="" class="brand-logo" />
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
+                        <div class="content__brand-item content__circle-dropdown--rotate">
+                           <div class="content__brand-item-wrapper">
+                              <img src="./img/logo/hp.png" alt="" class="brand-logo" />
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
                         </div>
-                     </div>
-                     <div class="content__brand-item content__circle-dropdown--rotate">
-                        <div class="content__brand-item-wrapper">
-                           <img src="./img/logo/acer.png" alt="" class="brand-logo" />
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
+                        <div class="content__brand-item content__circle-dropdown--rotate">
+                           <div class="content__brand-item-wrapper">
+                              <img src="./img/logo/acer.png" alt="" class="brand-logo" />
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
                         </div>
-                     </div>
-                     <div class="content__brand-item content__circle-dropdown--rotate">
-                        <div class="content__brand-item-wrapper">
-                           <img src="./img/logo/sony.png" alt="" class="brand-logo" />
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
+                        <div class="content__brand-item content__circle-dropdown--rotate">
+                           <div class="content__brand-item-wrapper">
+                              <img src="./img/logo/sony.png" alt="" class="brand-logo" />
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
+                        </div>
+                        <div class="content__brand-item content__circle-dropdown--rotate">
+                           <div class="content__brand-item-wrapper">
+                              <img src="./img/logo/lenovo.png" alt="" class="brand-logo" />
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
+                        </div>
+                        <div class="content__brand-item content__circle-dropdown--rotate">
+                           <div class="content__brand-item-wrapper">
+                              <img src="./img/logo/samsung.png" alt="" class="brand-logo" />
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
                         </div>
                      </div>
                   </div>
                   <div class="read-more read-more--none">
-                     <button>
+                     <button id="readMore-2">
                         <img src="./img/icons/ic-expand.svg" alt="" />
                         <p>Показать все</p>
                      </button>
@@ -287,41 +341,77 @@
                         <p>Ремонт техники различных видов техники</p>
                      </div>
                   </div>
-                  <div class="content__types-wrapper">
-                     <div class="content__type-item content__circle-dropdown--rotate">
-                        <div class="content__type-item-wrapper">
-                           <p>Ремонт ноутбуков</p>
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
+                  <div class="content__type-hide-wrapper">
+                     <div class="content__types-wrapper">
+                        <div class="content__type-item content__circle-dropdown--rotate">
+                           <div class="content__type-item-wrapper">
+                              <p>Ремонт ноутбуков</p>
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
+                        </div>
+                        <div class="content__type-item content__circle-dropdown--rotate">
+                           <div class="content__type-item-wrapper">
+                              <p>Ремонт планшетов</p>
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
+                        </div>
+                        <div class="content__type-item content__circle-dropdown--rotate">
+                           <div class="content__type-item-wrapper">
+                              <p>Ремонт ПК</p>
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
+                        </div>
+
+                        <div class="content__type-item content__circle-dropdown--rotate type-items--768">
+                           <div class="content__type-item-wrapper">
+                              <p>Ремонт мониторов</p>
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
+                        </div>
+                        <div class="content__type-item content__circle-dropdown--rotate type-items--768 type-items--1100">
+                           <div class="content__type-item-wrapper">
+                              <p>Ремонт ноутбуков</p>
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
+                        </div>
+                        <div class="content__type-item content__circle-dropdown--rotate type-items--768 type-items--1100">
+                           <div class="content__type-item-wrapper">
+                              <p>Ремонт планшетов</p>
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
+                        </div>
+                        <div class="content__type-item content__circle-dropdown--rotate type-items--768 type-items--1100">
+                           <div class="content__type-item-wrapper">
+                              <p>Ремонт ПК</p>
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
+                        </div>
+                        <div class="content__type-item content__circle-dropdown--rotate type-items--768 type-items--1100">
+                           <div class="content__type-item-wrapper">
+                              <p>Ремонт мониторов</p>
+                              <button class="circle-dropdown-btn">
+                                 <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
+                              </button>
+                           </div>
                         </div>
                      </div>
-                     <div class="content__type-item content__circle-dropdown--rotate">
-                        <div class="content__type-item-wrapper">
-                           <p>Ремонт планшетов</p>
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
-                        </div>
-                     </div>
-                     <div class="content__type-item content__circle-dropdown--rotate">
-                        <div class="content__type-item-wrapper">
-                           <p>Ремонт ПК</p>
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
-                        </div>
-                     </div>
-                     <div class="content__type-item content__circle-dropdown--rotate">
-                        <div class="content__type-item-wrapper">
-                           <p>Ремонт мониторов</p>
-                           <button class="circle-dropdown-btn">
-                              <img src="./img/icons/ic-dropdown-pink.svg" alt="" />
-                           </button>
-                        </div>
-                     </div>
+                     <div class="content__type-hidder"></div>
                   </div>
-                  <div class="read-more read-more--none">
+                  <div class="read-more read-more--none" id="readMore-3">
                      <button>
                         <img src="./img/icons/ic-expand.svg" alt="" />
                         <p>Показать все</p>
@@ -463,6 +553,21 @@
             </footer>
          </section>
       </main>
+
+      <div class="swiper mySwiper">
+         <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+         </div>
+         <div class="swiper-pagination"></div>
+      </div>
 
       <!-- <h1>TEST</h1>
       <img src="./img/webpack-logo.png" alt="" style="width: 50px; height: 50px" />

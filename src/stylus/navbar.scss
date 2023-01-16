@@ -114,6 +114,7 @@
    }
    main {
       display: flex;
+      min-width: 0;
       flex-flow: row nowrap;
    }
 }
