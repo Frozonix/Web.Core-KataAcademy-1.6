@@ -10,12 +10,20 @@
       cursor: pointer;
       margin-top: 24px;
       margin-bottom: 56px;
+      img {
+         pointer-events: none;
+      }
       p {
          margin: 0;
          font-family: 'TTLakes-M';
          font-size: 16px;
          line-height: 24px;
          letter-spacing: -0.2px;
+         pointer-events: none;
       }
    }
+}
+
+#more-1 {
+   display: none;
 }
