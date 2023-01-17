@@ -58,7 +58,6 @@ if (window.innerWidth <= 768) {
       slidesPerView: 1,
       spaceBetween: 16,
       speed: 400,
-      // freeMode: true,
    });
 }
 //==================================================================
