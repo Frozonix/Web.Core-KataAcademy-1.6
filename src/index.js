@@ -12,13 +12,23 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 if (window.innerWidth <= 768) {
-   let swiperInit = document.getElementById('swiper4_init');
-   swiperInit.className = 'swiper mySwiper';
-   let swiperWrapper = document.querySelector('.content__price-table');
-   swiperWrapper.className = 'content__price-table swiper-wrapper';
-   let swiperSlides = document.querySelectorAll('.swiper4_slide');
-   for (let i = 0; i < swiperSlides.length; i++) {
-      swiperSlides[i].className = 'swiper-slide';
+   let swiperInit3 = document.getElementById('swiper3_init');
+   swiperInit3.className = 'swiper mySwiper';
+   let swiperWrapper3 = document.querySelector('.content__types-wrapper');
+   console.log(swiperWrapper3);
+   swiperWrapper3.className = 'content__types-wrapper swiper-wrapper';
+   let swiperSlides3 = document.querySelectorAll('.swiper3_slide');
+   for (let i = 0; i < swiperSlides3.length; i++) {
+      swiperSlides3[i].className = 'swiper-slide';
+   }
+
+   let swiperInit4 = document.getElementById('swiper4_init');
+   swiperInit4.className = 'swiper mySwiper';
+   let swiperWrapper4 = document.querySelector('.content__price-table');
+   swiperWrapper4.className = 'content__price-table swiper-wrapper';
+   let swiperSlides4 = document.querySelectorAll('.swiper4_slide');
+   for (let i = 0; i < swiperSlides4.length; i++) {
+      swiperSlides4[i].className = 'swiper-slide';
    }
 
    let swiper = new Swiper('.mySwiper', {
@@ -28,13 +38,13 @@ if (window.innerWidth <= 768) {
       },
       mousewheel: {
          sensitivity: 0.8,
-         eventsTarget: '.swiper-slide',
+         // eventsTarget: '.swiper-slide',
       },
-      // scrollbar: {
-      //    el: '.swiper-scrollbar',
-      //    draggable: true,
-      //    snapOnRelease: false,
-      // },
+      scrollbar: {
+         el: '.swiper-scrollbar',
+         draggable: true,
+         snapOnRelease: false,
+      },
       touchRatio: 0.1,
       touchAngle: 120,
       slidesPerView: 1.2,

@@ -146,31 +146,35 @@
          }
       }
    }
-   @media (max-width: 1100px) {
-      .content__types-wrapper {
-         grid-template-columns: 1fr 1fr 1fr;
-         .content__type-item {
-            min-width: 192px;
-         }
-      }
-   }
+   // @media (max-width: 1100px) {
+   //    .content__types-wrapper {
+   //       grid-template-columns: 1fr 1fr 1fr;
+   //       .content__type-item {
+   //          min-width: 192px;
+   //       }
+   //    }
+   // }
    @media (max-width: $width-md) {
-      .content__repair-various-types {
-         .content__types-wrapper {
-            grid-template-columns: repeat(8, 1fr);
-            overflow-x: hidden;
-            .content__type-item {
-               min-width: 192px;
+      .content {
+         .content__repair-various-types {
+            .content__types-wrapper {
+               display: unset !important;
+               gap: unset !important;
+               overflow-x: hidden;
+               .content__type-item {
+                  min-width: 192px;
+               }
             }
-         }
-         .read-more--none {
-            display: none;
+            .read-more--none {
+               display: none;
+            }
          }
       }
       .content__type-hide-wrapper {
          height: 162px !important;
       }
    }
+
    .content__price-wrapper {
       font-family: 'TTLakes-R';
       font-size: 14px;

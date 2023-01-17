@@ -1,5 +1,6 @@
 .swiper-pagination {
    position: static;
+   z-index: 100;
    margin: 16px 0 8px 0;
 }
 .swiper-pagination-bullet {
@@ -16,10 +17,15 @@
    background-color: transparent;
    text-align: unset;
    font-size: unset;
-   min-width: 250px;
+   // min-width: 250px;
 
    img {
+      display: unset;
       width: unset;
       height: unset;
    }
+}
+.swiper-wrapper {
+   display: flex !important;
+   gap: unset !important;
 }
