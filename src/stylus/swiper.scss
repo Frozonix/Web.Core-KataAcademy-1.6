@@ -12,3 +12,14 @@
 .swiper-pagination-bullet-active {
    background: var(--swiper-pagination-color, $color-slider-1);
 }
+.swiper-slide {
+   background-color: transparent;
+   text-align: unset;
+   font-size: unset;
+   min-width: 250px;
+
+   img {
+      width: unset;
+      height: unset;
+   }
+}

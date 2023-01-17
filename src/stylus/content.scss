@@ -1,4 +1,5 @@
 .content {
+   min-width: 0;
    width: 100%;
    .content__wrapper {
       padding: 42px 32px;
@@ -309,7 +310,7 @@
             div:nth-child(3) {
                flex: 0 0 auto;
                p {
-                  margin: 0;
+                  margin-bottom: 0;
                }
             }
             div:nth-child(3)::before {
@@ -330,7 +331,7 @@
          .content__price-table {
             display: flex;
             flex-flow: row nowrap;
-            gap: 16px;
+            // gap: 16px;
 
             width: 1364px;
             background-color: transparent;

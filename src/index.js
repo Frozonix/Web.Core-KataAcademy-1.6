@@ -1,21 +1,48 @@
 import './stylus/main.scss';
 
 // core version + navigation, pagination modules:
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Scrollbar, Mousewheel, FreeMode } from 'swiper';
 
 // configure Swiper to use modules
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Scrollbar, Mousewheel, FreeMode]);
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
-var swiper = new Swiper('.mySwiper', {
-   pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-   },
-});
+if (window.innerWidth <= 768) {
+   let swiperInit = document.getElementById('swiper4_init');
+   swiperInit.className = 'swiper mySwiper';
+   let swiperWrapper = document.querySelector('.content__price-table');
+   swiperWrapper.className = 'content__price-table swiper-wrapper';
+   let swiperSlides = document.querySelectorAll('.swiper4_slide');
+   for (let i = 0; i < swiperSlides.length; i++) {
+      swiperSlides[i].className = 'swiper-slide';
+   }
+
+   let swiper = new Swiper('.mySwiper', {
+      pagination: {
+         el: '.swiper-pagination',
+         clickable: true,
+      },
+      mousewheel: {
+         sensitivity: 0.8,
+         eventsTarget: '.swiper-slide',
+      },
+      // scrollbar: {
+      //    el: '.swiper-scrollbar',
+      //    draggable: true,
+      //    snapOnRelease: false,
+      // },
+      touchRatio: 0.1,
+      touchAngle: 120,
+      slidesPerView: 1.2,
+      spaceBetween: 16,
+      speed: 400,
+      // freeMode: true,
+   });
+}
 //==================================================================
 //Read more
 
