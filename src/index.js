@@ -12,10 +12,18 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 if (window.innerWidth <= 768) {
+   let swiperInit2 = document.getElementById('swiper2_init');
+   swiperInit2.className = 'swiper mySwiper';
+   let swiperWrapper2 = document.querySelector('.content__brands-wrapper');
+   swiperWrapper2.className = 'content__brands-wrapper swiper-wrapper';
+   let swiperSlides2 = document.querySelectorAll('.swiper2_slide');
+   for (let i = 0; i < swiperSlides2.length; i++) {
+      swiperSlides2[i].className = 'swiper-slide';
+   }
+
    let swiperInit3 = document.getElementById('swiper3_init');
    swiperInit3.className = 'swiper mySwiper';
    let swiperWrapper3 = document.querySelector('.content__types-wrapper');
-   console.log(swiperWrapper3);
    swiperWrapper3.className = 'content__types-wrapper swiper-wrapper';
    let swiperSlides3 = document.querySelectorAll('.swiper3_slide');
    for (let i = 0; i < swiperSlides3.length; i++) {
@@ -47,7 +55,7 @@ if (window.innerWidth <= 768) {
       },
       touchRatio: 0.1,
       touchAngle: 120,
-      slidesPerView: 1.2,
+      slidesPerView: 1,
       spaceBetween: 16,
       speed: 400,
       // freeMode: true,
