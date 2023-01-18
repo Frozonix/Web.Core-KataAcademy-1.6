@@ -39,27 +39,42 @@ if (window.innerWidth <= 768) {
       swiperSlides4[i].className = 'swiper-slide';
    }
 
-   let swiper = new Swiper('.mySwiper', {
+   let swiper1 = new Swiper('.mySwiper', {
       pagination: {
          el: '.swiper-pagination',
          clickable: true,
       },
       mousewheel: {
          sensitivity: 0.8,
-         // eventsTarget: '.swiper-slide',
       },
-      scrollbar: {
-         el: '.swiper-scrollbar',
-         draggable: true,
-         snapOnRelease: false,
-      },
-      touchRatio: 0.1,
-      touchAngle: 120,
+      touchRatio: 0.5,
+      touchAngle: 180,
       slidesPerView: 1,
       spaceBetween: 16,
       speed: 400,
+      // width: 180,
+      updateOnWindowResize: true,
+      freeMode: true,
    });
 }
+//==================================================================
+//titleSwiper
+let swiper2 = new Swiper('.titleSwiper', {
+   mousewheel: {
+      sensitivity: 0.8,
+   },
+   draggable: true,
+   grabCursor: true,
+   touchRatio: 0.6,
+   touchAngle: 180,
+   slidesPerView: 1,
+   spaceBetween: 16,
+   speed: 400,
+   width: 180,
+   updateOnWindowResize: true,
+   freeMode: true,
+});
+
 //==================================================================
 //Read more
 

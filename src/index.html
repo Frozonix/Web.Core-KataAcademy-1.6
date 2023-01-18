@@ -6,27 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="icon" href="favicon.ico" type="image/icon" />
       <title>Name project</title>
-      <style>
-         .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-         }
-      </style>
+      <style></style>
    </head>
    <body>
       <aside class="modal" id="modalFeed">
@@ -184,15 +164,14 @@
                         </div>
                      </div>
                   </div>
-                  <div class="title-content__slider-menu">
-                     <div class="title-content__slider-menu-wrapper">
-                        <ul>
-                           <div class="title-content__item-menu--no-active"><li>Ремонтируемые бренды</li></div>
-                           <div class="title-content__item-menu--active"><li>Дополнительные услуги</li></div>
-                           <div class="title-content__item-menu--no-active"><li>Цены на услуги</li></div>
-                           <div class="title-content__item-menu--no-active"><li>Адреса сервисных центров</li></div>
-                           <div class="title-content__item-menu--no-active"><li>Специальные цены</li></div>
-                        </ul>
+                  <div class="title-content__slider-menu titleSwiper">
+                     <div class="title-content__slider-menu-wrapper swiper-wrapper">
+                        <div class="title-content__item-menu--no-active swiper-slide"><a href="#">Ремонтируемые бренды</a></div>
+                        <div class="title-content__item-menu--active swiper-slide"><a href="#">Дополнительные услуги</a></div>
+                        <div class="title-content__item-menu--no-active swiper-slide"><a href="#">Цены на услуги</a></div>
+                        <div class="title-content__item-menu--no-active swiper-slide"><a href="#">Адреса сервисных центров</a></div>
+                        <div class="title-content__item-menu--no-active swiper-slide"><a href="#">Специальные цены</a></div>
+                        <div class="title-content__item-menu--no-active swiper-slide"><a href="#">Отзывы</a></div>
                      </div>
                   </div>
                </div>
