@@ -27,3 +27,15 @@
 #more-1 {
    display: none;
 }
+
+@media (max-width: $width-md) {
+   .content {
+      .read-more--none {
+         display: none;
+      }
+   }
+}
+
+#more-1 {
+   display: none;
+}

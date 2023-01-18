@@ -1,21 +1,80 @@
 import './stylus/main.scss';
 
 // core version + navigation, pagination modules:
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, Scrollbar, Mousewheel, FreeMode } from 'swiper';
 
 // configure Swiper to use modules
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, Scrollbar, Mousewheel, FreeMode]);
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
-var swiper = new Swiper('.mySwiper', {
-   pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+if (window.innerWidth <= 768) {
+   let swiperInit2 = document.getElementById('swiper2_init');
+   swiperInit2.className = 'swiper mySwiper';
+   let swiperWrapper2 = document.querySelector('.content__brands-wrapper');
+   swiperWrapper2.className = 'content__brands-wrapper swiper-wrapper';
+   let swiperSlides2 = document.querySelectorAll('.swiper2_slide');
+   for (let i = 0; i < swiperSlides2.length; i++) {
+      swiperSlides2[i].className = 'swiper-slide';
+   }
+
+   let swiperInit3 = document.getElementById('swiper3_init');
+   swiperInit3.className = 'swiper mySwiper';
+   let swiperWrapper3 = document.querySelector('.content__types-wrapper');
+   swiperWrapper3.className = 'content__types-wrapper swiper-wrapper';
+   let swiperSlides3 = document.querySelectorAll('.swiper3_slide');
+   for (let i = 0; i < swiperSlides3.length; i++) {
+      swiperSlides3[i].className = 'swiper-slide';
+   }
+
+   let swiperInit4 = document.getElementById('swiper4_init');
+   swiperInit4.className = 'swiper mySwiper';
+   let swiperWrapper4 = document.querySelector('.content__price-table');
+   swiperWrapper4.className = 'content__price-table swiper-wrapper';
+   let swiperSlides4 = document.querySelectorAll('.swiper4_slide');
+   for (let i = 0; i < swiperSlides4.length; i++) {
+      swiperSlides4[i].className = 'swiper-slide';
+   }
+
+   let swiper1 = new Swiper('.mySwiper', {
+      pagination: {
+         el: '.swiper-pagination',
+         clickable: true,
+      },
+      mousewheel: {
+         sensitivity: 0.8,
+      },
+      touchRatio: 0.5,
+      touchAngle: 180,
+      slidesPerView: 1,
+      spaceBetween: 16,
+      speed: 400,
+      // width: 180,
+      updateOnWindowResize: true,
+      freeMode: true,
+   });
+}
+//==================================================================
+//titleSwiper
+let swiper2 = new Swiper('.titleSwiper', {
+   mousewheel: {
+      sensitivity: 0.8,
    },
+   draggable: true,
+   grabCursor: true,
+   touchRatio: 0.6,
+   touchAngle: 180,
+   slidesPerView: 1,
+   spaceBetween: 16,
+   speed: 400,
+   width: 180,
+   updateOnWindowResize: true,
+   freeMode: true,
 });
+
 //==================================================================
 //Read more
 

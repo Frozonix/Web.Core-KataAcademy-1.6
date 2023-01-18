@@ -118,3 +118,13 @@
       flex-flow: row nowrap;
    }
 }
+
+@media (max-width: $width-sm) {
+   .navbar__bottom-block {
+      .navbar__contacts-and-language {
+         h2 {
+            margin-bottom: 8px;
+         }
+      }
+   }
+}
