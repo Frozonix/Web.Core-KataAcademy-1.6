@@ -31,13 +31,30 @@ if (window.innerWidth <= 768) {
    }
 
    let swiperInit4 = document.getElementById('swiper4_init');
-   swiperInit4.className = 'swiper mySwiper';
+   swiperInit4.className = 'swiper swiperPrice';
    let swiperWrapper4 = document.querySelector('.content__price-table');
    swiperWrapper4.className = 'content__price-table swiper-wrapper';
    let swiperSlides4 = document.querySelectorAll('.swiper4_slide');
    for (let i = 0; i < swiperSlides4.length; i++) {
       swiperSlides4[i].className = 'swiper-slide';
    }
+
+   // let swiper1_windowSize = 1;
+   // if (window.innerWidth >= 405 && window.innerWidth <= 460) {
+   //    swiper1_windowSize = 1.4;
+   // }
+   // if (window.innerWidth >= 460 && window.innerWidth <= 576) {
+   //    swiper1_windowSize = 1.6;
+   // }
+   // if (window.innerWidth >= 576 && window.innerWidth <= 635) {
+   //    swiper1_windowSize = 2;
+   // }
+   // if (window.innerWidth >= 636 && window.innerWidth <= 699) {
+   //    swiper1_windowSize = 2.2;
+   // }
+   // if (window.innerWidth >= 700 && window.innerWidth <= 768) {
+   //    swiper1_windowSize = 2.4;
+   // }
 
    let swiper1 = new Swiper('.mySwiper', {
       pagination: {
@@ -52,8 +69,7 @@ if (window.innerWidth <= 768) {
       slidesPerView: 1,
       spaceBetween: 16,
       speed: 400,
-      // width: 180,
-      updateOnWindowResize: true,
+      width: 225,
       freeMode: true,
    });
 }
@@ -63,6 +79,10 @@ let swiper2 = new Swiper('.titleSwiper', {
    mousewheel: {
       sensitivity: 0.8,
    },
+   scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+   },
    draggable: true,
    grabCursor: true,
    touchRatio: 0.6,
@@ -71,6 +91,26 @@ let swiper2 = new Swiper('.titleSwiper', {
    spaceBetween: 16,
    speed: 400,
    width: 180,
+   updateOnWindowResize: true,
+   freeMode: true,
+});
+//==================================================================
+//swiperPrice
+let swiper3 = new Swiper('.swiperPrice', {
+   pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+   },
+   mousewheel: {
+      sensitivity: 0.8,
+   },
+   touchRatio: 0.5,
+   touchAngle: 180,
+   slidesPerView: 1,
+   maxBackfaceHiddenSlides: true,
+   spaceBetween: 16,
+   speed: 400,
+   width: 250,
    updateOnWindowResize: true,
    freeMode: true,
 });
@@ -125,11 +165,6 @@ function readMore3() {
       document.getElementById('readMore-3').querySelector('img').style.transform = 'rotate(360deg)';
       readMore_3_isClose = true;
    }
-   // if (screen_width >= 1100) {
-   //    openHeight = document.querySelectorAll('.brand-items--1100');
-   // } else {
-   //    openHeight = document.querySelectorAll('.brand-items--768');
-   // }
 }
 document.getElementById('readMore-1').addEventListener('click', function (e) {
    console.log(e.target.id);
@@ -173,6 +208,7 @@ function modalOpen(target) {
    removeModals();
    document.getElementById(result).style.right = 0;
    document.getElementById(result).style.boxShadow = '-2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2)';
+   document.querySelector('.blur').style.webkitFilter = 'blur(5px)';
 }
 
 document.getElementById('feedOpen').addEventListener('click', function (e) {
@@ -196,6 +232,7 @@ function modalClose(target) {
    let result = setModalId(target);
    document.getElementById(result).style.right = '-520px';
    document.getElementById(result).style.boxShadow = 'none';
+   document.querySelector('.blur').style = '';
 }
 
 document.getElementById('feedClose').addEventListener('click', function (e) {
@@ -209,5 +246,6 @@ document.getElementById('callClose').addEventListener('click', function (e) {
 document.getElementById('mainContent').addEventListener('click', function () {
    if (window.innerWidth >= 576 && window.innerWidth <= 768) {
       removeModals();
+      document.querySelector('.blur').style = '';
    }
 });
