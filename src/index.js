@@ -64,13 +64,50 @@ if (window.innerWidth <= 768) {
       mousewheel: {
          sensitivity: 0.8,
       },
+      breakpoints: {
+         320: {
+            slidesPerView: 1,
+         },
+         // desktop >= 991
+         350: {
+            slidesPerView: 1.3,
+         },
+         380: {
+            slidesPerView: 1.4,
+         },
+         420: {
+            slidesPerView: 1.6,
+         },
+         460: {
+            slidesPerView: 1.7,
+         },
+         490: {
+            slidesPerView: 1.8,
+         },
+         520: {
+            slidesPerView: 2,
+         },
+         580: {
+            slidesPerView: 2.1,
+         },
+         620: {
+            slidesPerView: 2.3,
+         },
+         680: {
+            slidesPerView: 2.5,
+         },
+         740: {
+            slidesPerView: 2.8,
+         },
+      },
       touchRatio: 0.5,
       touchAngle: 180,
       slidesPerView: 1,
       spaceBetween: 16,
       speed: 400,
-      width: 225,
+      // width: 225,
       freeMode: true,
+      touchReleaseOnEdges: true,
    });
 }
 //==================================================================
@@ -83,16 +120,65 @@ let swiper2 = new Swiper('.titleSwiper', {
       el: '.swiper-scrollbar',
       draggable: true,
    },
+   breakpoints: {
+      320: {
+         slidesPerView: 1.3,
+      },
+      // desktop >= 991
+      420: {
+         slidesPerView: 1.6,
+      },
+      480: {
+         slidesPerView: 1.8,
+      },
+      540: {
+         slidesPerView: 2,
+      },
+      600: {
+         slidesPerView: 2.1,
+      },
+      660: {
+         slidesPerView: 2.4,
+      },
+      700: {
+         slidesPerView: 2.5,
+      },
+      740: {
+         slidesPerView: 2.7,
+      },
+      768: {
+         slidesPerView: 2.2,
+      },
+      820: {
+         slidesPerView: 2.4,
+      },
+      850: {
+         slidesPerView: 2.5,
+      },
+      890: {
+         slidesPerView: 2.7,
+      },
+      940: {
+         slidesPerView: 2.9,
+      },
+      1100: {
+         slidesPerView: 3.1,
+      },
+      1280: {
+         slidesPerView: 4,
+      },
+   },
    draggable: true,
    grabCursor: true,
-   touchRatio: 0.6,
+   touchRatio: 1.2,
    touchAngle: 180,
    slidesPerView: 1,
    spaceBetween: 16,
    speed: 400,
-   width: 180,
+   // width: 180,
    updateOnWindowResize: true,
-   freeMode: true,
+   // freeMode: true,
+   touchReleaseOnEdges: true,
 });
 //==================================================================
 //swiperPrice
@@ -104,15 +190,47 @@ let swiper3 = new Swiper('.swiperPrice', {
    mousewheel: {
       sensitivity: 0.8,
    },
+   breakpoints: {
+      320: {
+         slidesPerView: 1,
+      },
+      // desktop >= 991
+      420: {
+         slidesPerView: 1.3,
+      },
+      450: {
+         slidesPerView: 1.5,
+      },
+      510: {
+         slidesPerView: 1.8,
+      },
+      620: {
+         slidesPerView: 2,
+      },
+      685: {
+         slidesPerView: 2.3,
+      },
+   },
+   initialSlide: 0,
    touchRatio: 0.5,
    touchAngle: 180,
    slidesPerView: 1,
-   maxBackfaceHiddenSlides: true,
    spaceBetween: 16,
    speed: 400,
-   width: 250,
-   updateOnWindowResize: true,
+   // width: 250,
    freeMode: true,
+   touchReleaseOnEdges: true,
+
+   // updateOnWindowResize: true,
+   // setWrapperSize: true,
+   // maxBackfaceHiddenSlides: true,
+   // loop: true,
+   // loopFillGroupBlank: false,
+   // slidesPerGroup: 2,
+   // centeredSlides: true,
+   // centeredSlidesBounds: true,
+   // centerInsufficientSlides: true,
+   // slidesOffsetAfter: 0,
 });
 
 //==================================================================
